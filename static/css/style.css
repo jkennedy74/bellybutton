@@ -1,5 +1,18 @@
- body {
-  text-transform: uppercase;
+jumbotron{
+  text-transform: uppercase; 
 
+}
 
-  }
+/* body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-transform: uppercase; 
+} */
+
+card {
+  opacity: .75;
+}
+
+s
