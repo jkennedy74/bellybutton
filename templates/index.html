@@ -11,67 +11,113 @@
 
     <link href="https://bootswatch.com/4/simplex/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href= "/static/css/style.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar-dark navbar-fixed-bottom">
-        <a class="navbar-brand" href="#">Biodiversity Dashboard</a>
-     </nav>
-    <div class="jumbotron text-center">
-         <h1>Belly Button Biodiversity</h1>
-    </div>
-    <!-- left section -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2">
 
-                <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
-                    <div class="card-header">SELECT Sample</div>
-                    <div class="card-body">
-                      <select id="selDataset" onchange="optionChanged(this.value)"></select>
-                    </div>
-                  </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarColor03">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                  </form>
                 </div>
-              </div>
-              <div class="row">
+              </nav>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Belly Button Biodiversity</h1>
+        </div>
+        <!-- sample -->
+        <div class="container">
 
-                <div class="col-md-2">
-                    <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
-                        <div class="card-header">Sample MetaData</div>
-                        <div class="card-body">
-                          <div id="sample-metadata" class="panel-body"></div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="row">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 100%;">
+                            <div class="card-header">SELECT Sample</div>
+                            <div class="card-body">
+                                <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                            </div>
+
+                            <hr>
+
+                            <div class="ccard text-white bg-primary mb-3" style="max-width: 100;">
+                                <div class="card-header">Sample MetaData</div>
+                                <div class="card-body" id="sample-metadata">
+                                                                            </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
-          </div>
-    <!-- right section -->
-            <div class="col-md-5">
-                <div id="pie"></div>
-            </div>
-            <div class="col-md-5">
-                <div id="gauge"></div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div id="bubble"></div>
-        </div>
-    </div>
+                </div>
+                <div class="col-10">
+                    <div class="row">
 
-    <!-- Bootstrap, D3, and Plotly -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+                            <div class="alert  alert-warning">
+                                    <div id="pie"></div>
+                                </div>
 
-    <!-- Custom JS -->
-    <script src="/static/js/app.js"></script>
-    <script src="/static/js/bonus.js"></script>
+                                <div class="alert  alert-warning">
+                                        <div id="gauge"></div>
+                                    </div>
+                                    
+                                    <div class="alert  alert-warning">
+                                            <div id="bubble"></div>
+                                        </div>
+                                
+                        <!-- <div class="card border-primary mb-3 " style="max-width: 100%;">
+                            <div class="card-header">Pie Chart</div>
+                            <canvas width="1000%" height="200%">
+                                <div id="pie"></div>
+                            </canvas>
+                            <div class="card-footer small text-muted">time updated here</div>
+                        </div>
+                        <div class="card border-primary mb-3" style="max-width: 100%;">
+                            <div class="card-header">Gauge Chart</div>
+                            <canvas width="1000%" height="200%">
+                                <div id="gauge"></div>
+                            </canvas>
+                            <div class="card-footer small text-muted">time updated here</div>
+                        </div>
 
+                        <div class="card border-primary mb-3" style="max-width: 100%;">
+                            <div class="card-header">Bubble Chart</div>
+                            <canvas width="1000%" height="200%">
+                                <div id="bubble"></div>
+
+                            </canvas>
+                            <div class="card-footer small text-muted">time updated here</div>
+                        </div>
+                    </div> -->
+                    <!-- Bootstrap, D3, and Plotly -->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+                    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+                    <!-- Custom JS -->
+                    <script src="/static/js/app.js"></script>
+                    <script src="/static/js/bonus.js"></script>
 
 </body>
 
