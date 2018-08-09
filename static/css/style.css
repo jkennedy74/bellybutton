@@ -1,9 +1,13 @@
 .jumbotron{
   text-transform: uppercase; 
+  opacity: .5;
+
 
 }
 
 body {
+  /* background: url('http://placehold.it/1920x1080') no-repeat center center fixed; */
+  background: url('cubes.png') repeat !important;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -11,4 +15,7 @@ body {
   text-transform: uppercase; 
 }
 
+.card{
+  opacity: .9;  
+}
 

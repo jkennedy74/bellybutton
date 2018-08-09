@@ -25,7 +25,7 @@ function buildGauge(wfreq) {
       type: "scatter",
       x: [0],
       y: [0],
-      marker: { size: 12, color: "850000" },
+      marker: { size: 12, color: "161925" },
       showlegend: false,
       name: "Freq",
       text: level,
@@ -55,7 +55,7 @@ function buildGauge(wfreq) {
       hoverinfo: "label",
       hole: 0.5,
       type: "pie",
-      showlegend: false
+      showlegend: false,
     }
   ];
 
@@ -64,15 +64,13 @@ function buildGauge(wfreq) {
       {
         type: "path",
         path: path,
-        fillcolor: "850000",
+        fillcolor: "161925",
         line: {
-          color: "850000"
+          color: "161925"
         }
       }
     ],
     title: "<b>Belly Button Washing Frequency</b> <br> Scrubs per Week",
-    height: 500,
-    width: 500,
     xaxis: {
       zeroline: false,
       showticklabels: false,
@@ -84,7 +82,9 @@ function buildGauge(wfreq) {
       showticklabels: false,
       showgrid: false,
       range: [-1, 1]
-    }
+    },autosize	:		false,
+    width	:	1100,
+    height	:	500
   };
 
   var GAUGE = document.getElementById("gauge");
