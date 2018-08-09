@@ -10,39 +10,52 @@
     <title>Belly Button Biodiversity Dashboard</title>
 
     <link href="https://bootswatch.com/4/minty/bootstrap.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="../static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">BELLY BUTTON BIODIVERSITY</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                            <a class="nav-link text-info" href="http://robdunnlab.com/projects/belly-button-biodiversity/" target="_blank"><strong>Learn More!</strong></a>
+                    </li>
+                    
+                </ul>
+                <div class="btn-group dropleft" role="group" aria-label="Button group with nested dropdown">
+                        <button type="button" class="btn btn-danger">APIs</button>
+                        <div class="btn-group" role="group">
+                          <button id="btnGroupDrop3" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                          <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+                            <a class="dropdown-item" href="/metadata/940" target="_blank">Meta Data Sample</a>
+                            <a class="dropdown-item" href="/samples/940" target="_blank">Sample</a>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-bottom">
-        <a class="navbar-brand" href="#">Belly Button Diversity Project</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </nav>
 
-        <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="http://robdunnlab.com/projects/belly-button-biodiversity/">Learn More</a>
-                </li>
-            </ul>
-
-        </div>
-    </nav>
     <div class="container">
-        <div class="jumbotron text-center">
+        <div class="jumbotron text-center bg-primary">
             <h1>Belly Button Biodiversity</h1>
-        </div>
+            <blockquote class="blockquote">
+                    <p class="mb-0">Use the interactive charts below to explore the dataset.</p>
+                  </blockquote>
+        </div> </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-4">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="card text-white bg-danger" style="max-width: 100%;">
+                                    <div class="card border-danger mb-3" style="max-width: 20rem;">
                                         <div class="card-header">SELECT Sample</div>
                                         <div class="card-body">
                                             <select id="selDataset" onchange="optionChanged(this.value)"></select>
@@ -50,21 +63,22 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="card text-white bg-danger" style="max-width: 100%;">
+                                    <div class="card border-danger mb-3" style="max-width: 20rem;">
                                         <div class="card-header">Sample Meta Data</div>
-                                        <div class="card-body" id="sample-metadata"><ul></ul>
+                                        <div class="card-body" id="sample-metadata">
+                                            <ul></ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-8">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="alert alert-light" style="max-width: 100%;">
+                                    <div class="alert alert-warning" style="max-width: 100%;">
                                         <div id="pie"></div>
                                     </div>
                                 </div>
@@ -81,7 +95,7 @@
         <div class="row">
 
             <div class="col-md-12">
-                <div class="alert alert-light" style="max-width: 100%;">
+                <div class="alert alert-warning" style="max-width: 100%;">
                     <div id="gauge"></div>
                 </div>
             </div>
@@ -89,13 +103,16 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="alert alert-light" style="max-width: 100%;">
+                <div class="alert alert-warning" style="max-width: 100%;">
                     <div id="bubble"></div>
                 </div>
             </div>
         </div>
 
     </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-bottom">
+            <p>Juliana Kennedy, 2018</p>
+          </nav>
 
     <!-- Bootstrap, D3, and Plotly -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
